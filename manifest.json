@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Call Them Out",
+  "description": "Surfacing mentions when certain people 'say' something on any page.",
+  "version": "0.1.0",
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Call Them Out",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

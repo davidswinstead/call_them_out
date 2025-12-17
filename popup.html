@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Call Them Out</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>Call Them Out</h1>
+    <p class="tagline">Control where and who you watch for.</p>
+  </header>
+
+  <section class="block">
+    <label for="names">Names to watch (one per line)</label>
+    <textarea id="names" rows="5" placeholder="Sam Altman\nElon Musk"></textarea>
+  </section>
+
+  <section class="block">
+    <p class="label">Site matching</p>
+    <div class="radio-group">
+      <label><input type="radio" name="mode" value="all" /> All sites</label>
+      <label><input type="radio" name="mode" value="whitelist" /> Include whitelist only</label>
+      <label><input type="radio" name="mode" value="blacklist" /> Exclude blacklist only</label>
+    </div>
+    <label for="whitelist">Whitelist domains (one per line)</label>
+    <textarea id="whitelist" rows="3" placeholder="example.com"></textarea>
+    <label for="blacklist">Blacklist domains (one per line)</label>
+    <textarea id="blacklist" rows="3" placeholder="ignore.com"></textarea>
+  </section>
+
+  <section class="block actions">
+    <button id="save">Save</button>
+    <span id="status" role="status"></span>
+  </section>
+
+  <script src="popup.js"></script>
+</body>
+</html>
