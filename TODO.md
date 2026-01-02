@@ -7,8 +7,8 @@
 - [ ] Can dismiss and it remembers for 1 day
 
 ## Bugs
-- [ ] Resizing
-- [ ] Moving
+- [ ] Resizing doesnt work properly
+- [ ] Moving resizes instead
 
 ## Improvements
 - [ ] 
